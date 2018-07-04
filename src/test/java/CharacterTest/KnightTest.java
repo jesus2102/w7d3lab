@@ -1,5 +1,6 @@
 package CharacterTest;
 
+import Armory.Weapons.Excalibur;
 import Characters.Knight;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,10 +10,12 @@ import static org.junit.Assert.assertEquals;
 public class KnightTest {
 
     Knight knight;
+    Excalibur excalibur;
 
     @Before
     public void before(){
         knight = new Knight("Lancelot", 10, 1200, 160, 80, 50);
+        excalibur = new Excalibur();
     }
 
     @Test
