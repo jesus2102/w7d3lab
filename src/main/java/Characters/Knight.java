@@ -36,12 +36,10 @@ public class Knight extends Character {
     }
 
     public void setWeapon(IWeapon weapon) {
-        this.weapon = null;
         this.weapon = weapon;
     }
 
     public void setArmor(IArmor armor){
-        this.armor = null;
         this.armor = armor;
     }
 }
