@@ -21,4 +21,26 @@ public abstract class Character {
     public String getName() {
         return name;
     }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public int getDefaultHp() {
+        return this.hp;
+    }
+
+    public int getDefaultAttack() {
+        return this.attack;
+    }
+
+    public int getDefaultDefense() {
+        return this.defense;
+    }
+
+    public int getDefaultMagic() {
+        return this.magic;
+    }
+
+
 }
