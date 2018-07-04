@@ -1,18 +1,16 @@
 package Characters;
 
-import Armory.Weapons.Excalibur;
-import Behaviours.IArmor;
 import Behaviours.IWeapon;
 
-public class Knight extends Character {
+public class Barbarian extends Character{
 
     private IWeapon weapon;
-    private IArmor armor;
+    private IWeapon weapon2;
 
-    public Knight(String name, int level, int hp, int attack, int defense, int magic, IWeapon weapon, IArmor armor){
+    public Knight(String name, int level, int hp, int attack, int defense, int magic, IWeapon weapon, IWeapon weapon2){
         super(name,level,hp,attack,defense,magic);
         this.weapon = weapon;
-        this.armor = armor;
+        this.weapon2 = weapon2;
     }
 
     public int getKnightHp() {
@@ -20,11 +18,11 @@ public class Knight extends Character {
     }
 
     public int getKnightAttack() {
-        return getDefaultAttack() + (3 * getLevel()) + weapon.getAttack();
+        return getDefaultAttack() + (3 * getLevel()) + weapon.getAttack() + weapon2.getAttack();
     }
 
     public int getKnightDefense() {
-        return getDefaultDefense() + (2 * getLevel()) + armor.getDefense() ;
+        return getDefaultDefense() + (2 * getLevel());
     }
 
     public int getKnightMagic() {
@@ -40,8 +38,8 @@ public class Knight extends Character {
         this.weapon = weapon;
     }
 
-    public void setArmor(IArmor armor){
-        this.armor = null;
-        this.armor = armor;
+    public void setWeapon2(IWeapon weapon2){
+        this.weapon2 = null;
+        this.weapon2 = weapon2;
     }
 }

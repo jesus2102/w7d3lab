@@ -2,6 +2,7 @@ package CharacterTest;
 
 import Armory.Armor.MithrylVest;
 import Armory.Weapons.Excalibur;
+import Armory.Weapons.LonginusSpear;
 import Behaviours.IWeapon;
 import Characters.Knight;
 import org.junit.Before;
@@ -15,11 +16,13 @@ public class KnightTest {
     Knight knight;
     Excalibur excalibur;
     MithrylVest mithrylVest;
+    LonginusSpear longinusSpear;
 
     @Before
     public void before(){
         excalibur = new Excalibur();
         mithrylVest = new MithrylVest();
+        longinusSpear = new LonginusSpear();
         knight = new Knight("Lancelot", 10, 1200, 160, 80, 50, excalibur, mithrylVest);
     }
 
@@ -65,8 +68,8 @@ public class KnightTest {
 
     @Test
     public void canSetWeapon(){
-        knight.setWeapon(excalibur);
-        assertEquals(110, knight.getWeapon().getAttack());
+        knight.setWeapon(longinusSpear);
+        assertEquals(70, knight.getWeapon().getAttack());
 
     }
 
