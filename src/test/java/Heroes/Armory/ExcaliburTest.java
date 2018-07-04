@@ -1,6 +1,6 @@
-package Armory;
+package Heroes.Armory;
 
-import Armory.Weapons.Excalibur;
+import Heroes.Armory.Weapons.Excalibur;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package Armory.HeavyWeapons;
+package Heroes.Armory.HeavyWeapons;
 
 import Behaviours.IHeavyWeapon;
 

@@ -1,4 +1,4 @@
-package Characters;
+package Heroes.Characters;
 
 public abstract class Character {
 

@@ -1,4 +1,4 @@
-package Armory.Creatures;
+package Heroes.Armory.Creatures;
 
 import Behaviours.ICreature;
 

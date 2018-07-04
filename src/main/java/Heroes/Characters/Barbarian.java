@@ -1,4 +1,4 @@
-package Characters;
+package Heroes.Characters;
 
 import Behaviours.IWeapon;
 

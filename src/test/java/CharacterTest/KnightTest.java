@@ -1,10 +1,9 @@
 package CharacterTest;
 
-import Armory.Armor.MithrylVest;
-import Armory.Weapons.Excalibur;
-import Armory.Weapons.LonginusSpear;
-import Behaviours.IWeapon;
-import Characters.Knight;
+import Heroes.Armory.Armor.MithrylVest;
+import Heroes.Armory.Weapons.Excalibur;
+import Heroes.Armory.Weapons.LonginusSpear;
+import Heroes.Characters.Knight;
 import org.junit.Before;
 import org.junit.Test;
 

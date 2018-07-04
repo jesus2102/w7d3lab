@@ -1,33 +1,33 @@
-package Characters;
+package Heroes.Characters;
 
 import Behaviours.ICreature;
 import Behaviours.ISpell;
 
-public class Wizard extends Character {
+public class Warlock extends Character{
 
     ISpell spell;
     ICreature creature;
 
-    public Wizard(String name, int level, int hp, int attack, int defense, int magic, ISpell spell, ICreature creature) {
+    public Warlock(String name, int level, int hp, int attack, int defense, int magic, ISpell spell, ICreature creature) {
         super(name, level, hp, attack, defense, magic);
         this.spell = spell;
         this.creature = creature;
     }
 
 
-    public int getWizardHp() {
+    public int getWarlockHp() {
         return getDefaultHp() + (4 * getLevel());
     }
 
-    public int getWizardAttack() {
+    public int getWarlockAttack() {
         return getDefaultAttack() + (1 * getLevel());
     }
 
-    public int getWizardDefense() {
+    public int getWarlockDefense() {
         return getDefaultDefense() + (2 * getLevel()) + creature.getDefense();
     }
 
-    public int getWizardMagic() {
+    public int getWarlockMagic() {
         return getDefaultMagic() + (3 * getLevel()) + spell.getMagic();
     }
 

@@ -1,4 +1,4 @@
-package Armory.Spells;
+package Heroes.Armory.Spells;
 
 import Behaviours.ISpell;
 

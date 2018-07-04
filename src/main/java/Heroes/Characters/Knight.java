@@ -1,6 +1,5 @@
-package Characters;
+package Heroes.Characters;
 
-import Armory.Weapons.Excalibur;
 import Behaviours.IArmor;
 import Behaviours.IWeapon;
 
