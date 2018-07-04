@@ -34,12 +34,10 @@ public class Barbarian extends Character{
     }
 
     public void setWeapon(IWeapon weapon) {
-        this.weapon = null;
         this.weapon = weapon;
     }
 
     public void setWeapon2(IWeapon weapon2){
-        this.weapon2 = null;
         this.weapon2 = weapon2;
     }
 }
