@@ -1,21 +1,26 @@
 package CharacterTest;
 
+import Armory.Armor.MithrylVest;
 import Armory.Weapons.Excalibur;
+import Behaviours.IWeapon;
 import Characters.Knight;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class KnightTest {
 
     Knight knight;
     Excalibur excalibur;
+    MithrylVest mithrylVest;
 
     @Before
     public void before(){
-        knight = new Knight("Lancelot", 10, 1200, 160, 80, 50);
         excalibur = new Excalibur();
+        mithrylVest = new MithrylVest();
+        knight = new Knight("Lancelot", 10, 1200, 160, 80, 50, excalibur, mithrylVest);
     }
 
     @Test
@@ -40,18 +45,32 @@ public class KnightTest {
 
     @Test
     public void hasAttack(){
-        assertEquals(190, knight.getKnightAttack());
+        assertEquals(300, knight.getKnightAttack());
     }
 
     @Test
     public void hasDefense(){
-        assertEquals(100, knight.getKnightDefense());
+        assertEquals(160, knight.getKnightDefense());
     }
 
     @Test
     public void hasMagic(){
         assertEquals(70, knight.getKnightMagic());
     }
+
+    @Test
+    public void hasWeapon(){
+        assertNotNull(knight.getWeapon());
+    }
+
+    @Test
+    public void canSetWeapon(){
+        knight.setWeapon(excalibur);
+        assertEquals(110, knight.getWeapon().getAttack());
+
+    }
+
+
 
 
 
