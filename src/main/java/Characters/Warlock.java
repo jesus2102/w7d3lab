@@ -1,13 +1,17 @@
 package Characters;
 
+import Behaviours.ICreature;
 import Behaviours.ISpell;
 
 public class Warlock extends Character{
 
     ISpell spell;
+    ICreature creature;
 
-    public Warlock(String name, int level, int hp, int attack, int defense, int magic, ISpell spell) {
+    public Warlock(String name, int level, int hp, int attack, int defense, int magic, ISpell spell, ICreature creature) {
         super(name, level, hp, attack, defense, magic);
+        this.spell = spell;
+        this.creature = creature;
     }
 
 
@@ -16,11 +20,11 @@ public class Warlock extends Character{
     }
 
     public int getWarlockAttack() {
-        return getDefaultAttack() + (2 * getLevel());
+        return getDefaultAttack() + (1 * getLevel());
     }
 
     public int getWarlockDefense() {
-        return getDefaultDefense() + (3 * getLevel());
+        return getDefaultDefense() + (2 * getLevel()) + creature.getDefense();
     }
 
     public int getWarlockMagic() {
@@ -28,10 +32,18 @@ public class Warlock extends Character{
     }
 
     public ISpell getSpell() {
-        return spell;
+        return this.spell;
     }
 
     public void setSpell(ISpell spell) {
         this.spell = spell;
+    }
+
+    public ICreature getCreature() {
+        return creature;
+    }
+
+    public void setcreature(ICreature creature) {
+        this.creature = creature;
     }
 }
